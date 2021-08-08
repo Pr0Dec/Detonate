@@ -1,10 +1,9 @@
-# php-eval-hook
+# Detonate
 
-A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. The extension is expected to work with PHP 7.x in general. May work with PHP 5.x but is untested.
+A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. The extension is expected to work with PHP 7.x.
 
 ## Compiling steps
 
-A precompiled extension can be downloaded from [releases](https://github.com/extremecoders-re/php-eval-hook/releases). It has been compiled against PHP 7.2.24 available on Ubuntu 18.04 repos. The precompiled extension is not guaranteed to work on your system. Hence it's always recommended to compile from source as shown below.
 
 1. Install php and php-dev packages. Here we are using the packages available on the official Ubuntu 18.04 repos.
 
@@ -48,18 +47,18 @@ A precompiled extension can be downloaded from [releases](https://github.com/ext
 
 2. Edit *php.ini* and add the line `extension=evalhook.so` at the end.
     ```
-    $ echo "extension=evalhook.so" >> /etc/php/7.2/cli/php.ini
+    $ echo "extension=detonate.so" >> /etc/php/7.2/cli/php.ini
     ```
 
 3. Ensure that the extension is properly loaded.
     ```
-    $ php -r 'print_r(get_loaded_extensions());' | grep evalhook
-        [14] => evalhook
+    $ php -r 'print_r(get_loaded_extensions());' | grep detonate
+        [14] => detonate
     ```
 
     ```
-    $ php -r 'phpinfo();' | grep eval
-    evalhook
+    $ php -r 'phpinfo();' | grep detonate
+    detonate
     eval() hooking => enabled
     callback function => __eval
     ```
