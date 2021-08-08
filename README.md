@@ -14,7 +14,7 @@ A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. T
 2. Clone the repository
 
     ```
-    $ git clone https://github.com/extremecoders-re/php-eval-hook
+    $ git clone https://github.com/Pr0Dec/Detonate
     ```
 
 3. Run `phpize`. This will generate the `Makefile` and other files needed for buidling the extension.
@@ -27,7 +27,7 @@ A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. T
 4. Build the extension. `make install` copies the `.so` to the appropriate location.
 
     ```
-    $ ./configure --enable-evalhook
+    $ ./configure --enable-detonate
 
     $ make
 
@@ -45,7 +45,7 @@ A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. T
     Loaded Configuration File => /etc/php/7.2/cli/php.ini
     ```
 
-2. Edit *php.ini* and add the line `extension=evalhook.so` at the end.
+2. Edit *php.ini* and add the line `extension=detonate.so` at the end.
     ```
     $ echo "extension=detonate.so" >> /etc/php/7.2/cli/php.ini
     ```
