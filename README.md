@@ -15,12 +15,14 @@ A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. T
 
     ```
     $ git clone https://github.com/Pr0Dec/Detonate
+    
+    
     ```
 
 3. Run `phpize`. This will generate the `Makefile` and other files needed for buidling the extension.
 
     ```
-    $ cd php-eval-hook
+    $ cd Detonate
     $ phpize
     ```
 
@@ -30,8 +32,8 @@ A PHP extension for hooking `eval()`. Useful for dumping eval-obfuscated code. T
     $ ./configure --enable-detonate
 
     $ make
-
-    $ make install
+    # DONT FORGET TO RUN IT AS ROOT otherwise you may have error in building
+    $ sudo make install
     Installing shared extensions:     /usr/lib/php/20170718/
     ```
 
